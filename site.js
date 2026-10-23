@@ -37,6 +37,7 @@
       ${day.menus.map((m,j)=>`<section class="menu-card" aria-label="${esc(m.label)}">
         <div class="menu-card-head"><div class="left"><h3>${esc(m.label)}</h3>${m.vegetarian?'<span class="pill">Vegetarian</span>':''}</div>${price(m.price)}</div>
         ${m.dishes.map((d,k)=>dish(d,`dish-${day.key}-${j}-${k}`)).join('')}
+        ${m.alternative ? `<div class="menu-alternative"><span>sau · alternativa la felul principal</span></div>${dish(m.alternative,`dish-${day.key}-${j}-alternative`)}` : ''}
       </section>`).join('')}
       <section class="dessert-card" aria-label="Desertul zilei"><div class="dessert-label"><h3>Desertul zilei</h3><span class="inclusive ${day.dessert.included===null?'uncertain':''}">${day.dessert.included===true?'Inclus in meniu':day.dessert.included===null?'Includere de confirmat':''}</span></div>
         ${dish(day.dessert,`dessert-${day.key}`)}</section>

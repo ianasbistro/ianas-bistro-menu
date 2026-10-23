@@ -48,8 +48,20 @@ window.IANA_MENU = {
     { key: "vineri", label: "Vineri", date: "23 oct", menus: [
       { label: "Meniu 1", price: 45, dishes: [
         { name: "Supa crema de broccoli cu cheddar", quantity: "300 ml", ingredients: "Broccoli, cartof, morcov, ceapa, branza cheddar, smantana.", allergens: [7] },
-        { name: "Sandwich of the Day", quantity: "300 g", ingredients: "Focaccia (faina alba de grau, apa, drojdie proaspata, ulei de masline extravirgin, zahar, sare, rozmarin), ulei de masline, sos pesto (ulei vegetal de floarea-soarelui, caju, busuioc, branza Grana Padano, lapte, ou, branza Pecorino Romano, ulei de masline, seminte de pin), stracciatella, prosciutto cotto (sunca de porc), rosii uscate (rosii, ulei de masline, otet din vin alb, patrunjel, chili, piper), mozzarella.", allergens: [1,3,7,8], traces: "Sosul pesto poate contine urme de alte nuci, alune sau soia. Producatorul declara ca pesto nu contine gluten.", check: "Glutenul (1) provine din focaccia, nu din pesto. Otetul din vin alb poate necesita verificarea continutului de sulfiti pe eticheta. Confirmati la furnizor ce inseamna «alune» pe eticheta pesto." }
-      ]}
+        { name: "Sandwich of the Day", quantity: "300 g", ingredients: "Focaccia (faina alba de grau, apa, drojdie proaspata, ulei de masline extravirgin, zahar, sare, rozmarin), ulei de masline, sos pesto (ulei vegetal de floarea-soarelui, caju, busuioc, branza Grana Padano, lapte, ou, branza Pecorino Romano, ulei de masline, seminte de pin), prosciutto cotto (sunca de porc), rosii uscate (rosii, ulei de masline, otet din vin alb, patrunjel, chili, piper), mozzarella.", allergens: [1,3,7,8], traces: "Sosul pesto poate contine urme de alte nuci, alune sau soia. Producatorul declara ca pesto nu contine gluten.", check: "Glutenul (1) provine din focaccia, nu din pesto. Otetul din vin alb poate necesita verificarea continutului de sulfiti pe eticheta. Confirmati la furnizor ce inseamna «alune» pe eticheta pesto." }
+      ], alternative: {
+        name: "Salata", quantity: "300 g",
+        ingredients: "Salata verde, rucola, baby spanac, morcov, castraveti, rosie, avocado, porumb, mazare, mozzarella, pui.",
+        allergens: [7]
+      }},
+      { label: "Meniu 2", price: 40, vegetarian: true, dishes: [
+        { name: "Supa crema de broccoli cu cheddar", quantity: "300 ml", ingredients: "Broccoli, cartof, morcov, ceapa, branza cheddar, smantana.", allergens: [7] },
+        { name: "Sandwich of the Day (vegetarian)", quantity: "300 g", ingredients: "Focaccia (faina alba de grau, apa, drojdie proaspata, ulei de masline extravirgin, zahar, sare, rozmarin), ulei de masline, sos pesto (ulei vegetal de floarea-soarelui, caju, busuioc, branza Grana Padano, lapte, ou, branza Pecorino Romano, ulei de masline, seminte de pin), rosii uscate (rosii, ulei de masline, otet din vin alb, patrunjel, chili, piper), mozzarella.", allergens: [1,3,7,8], traces: "Sosul pesto poate contine urme de alte nuci, alune sau soia. Producatorul declara ca pesto nu contine gluten.", check: "Glutenul (1) provine din focaccia, nu din pesto. Otetul din vin alb poate necesita verificarea continutului de sulfiti pe eticheta. Confirmati la furnizor ce inseamna «alune» pe eticheta pesto." }
+      ], alternative: {
+        name: "Salata", quantity: "300 g", vegetarian: true,
+        ingredients: "Salata verde, rucola, baby spanac, morcov, castraveti, rosie, avocado, porumb, mazare, mozzarella; la alegere, naut sau tofu.",
+        allergens: [6,7], note: "Alergenul 7 (lapte) provine din mozzarella. Alergenul 6 (soia) se aplica doar variantei cu tofu; varianta cu naut nu contine tofu."
+      }}
     ], dessert: { name: "Briosa cu ciocolata", quantity: "120 g", included: true, ingredients: "Zahar, faina, ulei de masline, unt, oua, ciocolata (zahar, masa de cacao, unt de cacao, pudra de cacao, grasime vegetala din palmier si shea, lecitina din soia).", allergens: [1,3,6,7], traces: "Ciocolata poate contine urme de arahide, fructe cu coaja lemnoasa, lapte, gluten si oua.", check: "Tipul de faina nu este precizat; soia (6) este prezenta prin lecitina din ciocolata." }}
   ],
   drinks: [
