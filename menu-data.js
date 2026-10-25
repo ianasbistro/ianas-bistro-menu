@@ -36,7 +36,7 @@ window.IANA_MENU = {
         }
       ],
       "dessert": {
-        "name": "Papanași cu smântână și dulceață de fructe de pădure",
+        "name": "Papanaș cu smântână și dulceață de fructe de pădure",
         "quantity": "120 g",
         "ingredients": "Făină, brânză de vaci, zahăr, pastă de vanilie, coajă de lămâie, bicarbonat de sodiu, dulceață de fructe de pădure, smântână 20%.",
         "allergens": [
