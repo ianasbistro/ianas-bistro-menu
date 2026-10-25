@@ -58,7 +58,7 @@
     const drinkTab=tab==='drinks';
     const groups = drinkTab?data.drinks:[{category:'Produse de patiserie',items:data.pastry.filter(p=>p.category!=='Sandwich-uri')},{category:'Sandwich-uri',items:data.pastry.filter(p=>p.category==='Sandwich-uri')}];
     const total=groups.reduce((n,g)=>n+g.items.filter(i=>normalize(i.name+' '+(i.note||'')).includes(normalize(search))).length,0);
-    return `<div class="section-head"><h1>${drinkTab?'Cafea & băuturi':'Patiserie & sandwich-uri'}</h1><p>${drinkTab?'Un moment de răsfăț':'Gustări proaspete'}</p></div>
+    return `<div class="section-head"><h1>${drinkTab?'Cafea & băuturi':'Sandwich-uri și patiserie'}</h1><p>${drinkTab?'Un moment de răsfăț':'Gustări proaspete'}</p></div>
       <label class="search"><span aria-hidden="true">⌕</span><input type="search" data-search placeholder="Caută un produs..." aria-label="Caută un produs" value="${esc(search)}"></label>
       ${groups.map(g=>{const html=productsList(g.items);return html?`<section><h2 class="listing-header">${esc(g.category)}</h2>${html}</section>`:''}).join('')}
       ${total ? '' : '<p class="empty">Nu am găsit produse pentru această căutare.</p>'}
