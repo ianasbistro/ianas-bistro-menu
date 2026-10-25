@@ -36,9 +36,9 @@ window.IANA_MENU = {
         }
       ],
       "dessert": {
-        "name": "Papanași cu smântână și dulceață de afine",
+        "name": "Papanași cu smântână și dulceață de fructe de pădure",
         "quantity": "120 g",
-        "ingredients": "Făină, brânză de vaci, zahăr, pastă de vanilie, coajă de lămâie, bicarbonat de sodiu, dulceață de afine, smântână 20%.",
+        "ingredients": "Făină, brânză de vaci, zahăr, pastă de vanilie, coajă de lămâie, bicarbonat de sodiu, dulceață de fructe de pădure, smântână 20%.",
         "allergens": [
           1,
           7
