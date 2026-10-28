@@ -1,4 +1,4 @@
-/* iana's bistro — Meniul 26–30 octombrie 2026.
+/* iana's bistro — Meniul 26–30 octombrie 2026, actualizare desert miercuri: Ruladă cu mere.
    Actualizat conform documentului primit și confirmărilor ulterioare.
    Verificați declarațiile de alergeni cu etichetele ingredientelor folosite. */
 window.IANA_MENU = {
@@ -122,18 +122,15 @@ window.IANA_MENU = {
               "note": "Lista ingredientelor este comună celor trei componente: falafel, hummus și salată tabbouleh."
             }
           ],
-          "fast": true
+          "fast": false
         }
       ],
       "dessert": {
-        "name": "Măr copt cu nucă, scorțișoară și miere",
-        "quantity": "120 g",
-        "ingredients": "Măr, nucă, scorțișoară, miere, zahăr brun.",
-        "allergens": [
-          8
-        ],
-        "included": true,
-        "note": "Conține miere; nu este un desert vegan."
+        "name": "Ruladă cu mere",
+        "quantity": "",
+        "ingredients": "Făină de grâu, mere bio, scorțișoară, lapte, ouă.",
+        "allergens": [1, 3, 7],
+        "included": true
       }
     },
     {
