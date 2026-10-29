@@ -173,10 +173,14 @@ window.IANA_MENU = {
       "dessert": {
         "name": "Brioșă cu ciocolată",
         "quantity": "",
-        "ingredients": "",
-        "allergens": [],
-        "allergenStatus": "pending",
-        "included": true
+        "ingredients": "Zahăr, făină, ulei de măsline, unt, ouă, ciocolată.",
+        "allergens": [
+          1,
+          3,
+          7
+        ],
+        "included": true,
+        "check": "Alergenii 1 (gluten), 3 (ouă) și 7 (lapte) rezultă din ingredientele declarate, presupunând făină de grâu. Verificați eticheta ciocolatei pentru alți alergeni, inclusiv soia, și pentru eventuale urme de fructe cu coajă lemnoasă."
       }
     },
     {
