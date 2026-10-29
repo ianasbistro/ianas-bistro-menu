@@ -129,7 +129,11 @@ window.IANA_MENU = {
         "name": "Ruladă cu mere",
         "quantity": "",
         "ingredients": "Făină de grâu, mere bio, scorțișoară, lapte, ouă.",
-        "allergens": [1, 3, 7],
+        "allergens": [
+          1,
+          3,
+          7
+        ],
         "included": true
       }
     },
@@ -167,13 +171,11 @@ window.IANA_MENU = {
         }
       ],
       "dessert": {
-        "name": "Pavlova",
-        "quantity": "150 g",
-        "ingredients": "Albuș de ou, zahăr, amidon, zeamă de lămâie, smântână pentru frișcă, mascarpone, lapte condensat, afine, căpșune, coacăze.",
-        "allergens": [
-          3,
-          7
-        ],
+        "name": "Brioșă cu ciocolată",
+        "quantity": "",
+        "ingredients": "",
+        "allergens": [],
+        "allergenStatus": "pending",
         "included": true
       }
     },
