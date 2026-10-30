@@ -1,5 +1,6 @@
-/* iana's bistro — Meniul 26–30 octombrie 2026, actualizare desert miercuri: Ruladă cu mere.
-   Actualizat conform documentului primit și confirmărilor ulterioare.
+/* iana's bistro — Meniul 26–30 octombrie 2026.
+   Actualizare 30 octombrie: supă cremă de ciuperci cu crutoane,
+   pui cu rozmarin, sos Cheddar și piure, papanași cu smântână și dulceață de fructe de pădure.
    Verificați declarațiile de alergeni cu etichetele ingredientelor folosite. */
 window.IANA_MENU = {
   "title": "iana's bistro",
@@ -190,36 +191,38 @@ window.IANA_MENU = {
       "menus": [
         {
           "label": "Meniu 1",
-          "price": 42,
+          "price": 45,
           "dishes": [
             {
-              "name": "Supă cremă de linte",
+              "name": "Supă cremă de ciuperci cu crutoane",
               "quantity": "300 ml",
-              "ingredients": "Linte, ceapă, morcov, cartof, smântână vegetală.",
-              "allergens": [],
-              "allergenStatus": "pending",
-              "check": "Verificați compoziția smântânii vegetale utilizate înainte de a confirma absența alergenilor."
+              "ingredients": "Ceapă, țelină, cartof, ciuperci, ulei de măsline; crutoane (pâine graham, praf de usturoi, cimbru, ulei de măsline).",
+              "allergens": [
+                1,
+                9
+              ]
             },
             {
-              "name": "Tocăniță de năut cu roșii, spanac și orez aromat",
-              "quantity": "300 g",
-              "ingredients": "Năut, roșii, spanac, ceapă, morcov, usturoi, orez, lămâie, ulei de floarea-soarelui.",
-              "allergens": [],
-              "allergenStatus": "none"
+              "name": "Pui cu rozmarin, sos Cheddar și piure de cartofi",
+              "quantity": "250 g",
+              "ingredients": "Piept de pui, rozmarin, cheddar, smântână de gătit, ceapă, cartofi, lapte, parmezan.",
+              "allergens": [
+                7
+              ]
             }
-          ],
-          "fast": true
+          ]
         }
       ],
       "dessert": {
-        "name": "Negresă",
+        "name": "Papanași cu smântână și dulceață de fructe de pădure",
         "quantity": "120 g",
-        "ingredients": "Făină, zahăr, măr, dulceață de prune, cacao.",
+        "ingredients": "Făină, brânză de vaci, zahăr, pastă de vanilie, coajă de lămâie, bicarbonat de sodiu, dulceață de fructe de pădure, smântână 20%.",
         "allergens": [
-          1
+          1,
+          7
         ],
         "included": true,
-        "check": "Alergenul 1 presupune făină de grâu; verificați făina folosită."
+        "check": "Alergenul 1 presupune făină de grâu; verificați sortimentul de făină folosit."
       }
     }
   ],
