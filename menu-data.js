@@ -1,82 +1,81 @@
-/* iana's bistro — Meniul 26–30 octombrie 2026.
-   Actualizare 30 octombrie: supă cremă de ciuperci cu crutoane,
-   pui cu rozmarin, sos Cheddar și piure, papanași cu smântână și dulceață de fructe de pădure.
-   Verificați declarațiile de alergeni cu etichetele ingredientelor folosite. */
+/* iana's bistro — Meniul 2–6 noiembrie 2026.
+   Bazat pe documentul furnizat: vineri încă nu este stabilit; includerea desertului de miercuri a fost confirmată.
+   Alergenii sunt deduși din ingrediente și trebuie confirmați cu etichetele folosite în bucătărie. */
 window.IANA_MENU = {
   "title": "iana's bistro",
-  "week": "26–30 octombrie 2026",
+  "week": "2–6 noiembrie 2026",
   "days": [
     {
       "key": "luni",
       "label": "Luni",
-      "date": "26 oct",
+      "date": "2 nov",
       "menus": [
         {
           "label": "Meniu 1",
           "price": 45,
           "dishes": [
             {
-              "name": "Supă cremă de legume cu crutoane aromatizate",
+              "name": "Supă miso cu legume, ciuperci și ghimbir",
               "quantity": "300 ml",
-              "ingredients": "Țelină, morcov, păstârnac, cartof dulce, ardei, cartof, ceapă, smântână de gătit, pâine graham, praf de usturoi, cimbru, ulei de măsline.",
+              "ingredients": "Ceapă, usturoi, ghimbir, ciuperci, ceapă verde, pastă miso, sos de soia, ulei de susan, morcov, ardei.",
               "allergens": [
                 1,
-                7,
-                9
-              ]
+                6,
+                11
+              ],
+              "check": "Alergenii 1 (grâu) și 6 (soia) provin din sosul de soia descris anterior. Verificați etichetele pastei miso și sosului de soia pentru compoziția exactă."
             },
             {
-              "name": "Pui cu ciuperci în sos Gorgonzola și piure de cartofi",
+              "name": "Pui teriyaki cu orez (preparat în bucătăria noastră)",
               "quantity": "300 g",
-              "ingredients": "Piept de pui, ciuperci, ulei de măsline, ceapă, usturoi, smântână de gătit, Gorgonzola, cimbru, cartofi, lapte, unt, parmezan.",
+              "ingredients": "Pulpe de pui, sos de soia, miere, zahăr brun, amidon, usturoi, ceapă, ghimbir, ulei de susan, orez, ceapă verde.",
               "allergens": [
-                7
-              ]
+                1,
+                6,
+                11
+              ],
+              "check": "Alergenii 1 și 6 depind de sosul de soia folosit; verificați eticheta."
             }
           ]
         }
       ],
       "dessert": {
-        "name": "Papanaș cu smântână și dulceață de fructe de pădure",
+        "name": "Pavlova",
         "quantity": "120 g",
-        "ingredients": "Făină, brânză de vaci, zahăr, pastă de vanilie, coajă de lămâie, bicarbonat de sodiu, dulceață de fructe de pădure, smântână 20%.",
+        "ingredients": "Albuș de ou, zahăr, lămâie, smântână pentru frișcă, lapte condensat, mascarpone, afine.",
         "allergens": [
-          1,
+          3,
           7
         ],
-        "included": true,
-        "check": "Alergenul 1 presupune făină de grâu; verificați sortimentul de făină folosit."
+        "included": true
       }
     },
     {
       "key": "marti",
       "label": "Marți",
-      "date": "27 oct",
+      "date": "3 nov",
       "menus": [
         {
           "label": "Meniu 1",
           "price": 45,
           "dishes": [
             {
-              "name": "Supă cremă de ciuperci",
+              "name": "Supă cremă de linte",
               "quantity": "300 ml",
-              "ingredients": "Ceapă, țelină, cartof, ciuperci, ulei de măsline.",
-              "allergens": [
-                9
-              ]
+              "ingredients": "Linte, ceapă, morcov, cartof, smântână vegetală.",
+              "allergens": [],
+              "check": "Verificați eticheta smântânii vegetale pentru alergeni suplimentari; lista ingredientelor nu indică explicit unul dintre cei 14 alergeni."
             },
             {
-              "name": "Tagliatelle cu pui, pesto și roșii cherry",
+              "name": "Lasagna",
               "quantity": "250 g",
-              "ingredients": "Piept de pui, usturoi, roșii cherry, tagliatelle (griș de grâu dur, ouă pasteurizate), sos pesto (ulei vegetal de floarea-soarelui, caju, busuioc, brânză Grana Padano, lapte, ou, brânză Pecorino Romano, ulei de măsline, semințe de pin).",
+              "ingredients": "Făină, ou, sare, carne de vită, morcov, ceapă, usturoi, sos de roșii, parmezan, ulei de măsline, rozmarin, busuioc, cimbru.",
               "allergens": [
                 1,
                 3,
-                7,
-                8
+                7
               ],
-              "traces": "Tagliatellele: eticheta menționează posibile urme de soia și muștar. Sosul pesto poate conține urme de alte fructe cu coajă lemnoasă, alune sau soia.",
-              "note": "Tagliatellele conțin ouă ca ingredient declarat, chiar dacă eticheta mai menționează separat posibile urme de ouă."
+              "check": "Alergenul 1 presupune făină de grâu. Verificați compoziția sosului de roșii, dacă este un produs cumpărat."
             }
           ]
         }
@@ -84,52 +83,48 @@ window.IANA_MENU = {
       "dessert": {
         "name": "iana's Tiramisu",
         "quantity": "150 g",
-        "ingredients": "Mascarpone, frișcă lichidă, gălbenuș de ou pasteurizat, zahăr, cacao, cafea decofeinizată, biscuiți amaretti (zahăr, făină de grâu, sâmburi de caise 13%, albuș de ou, proteine din lapte, agenți de creștere E500 și E503, arome).",
+        "ingredients": "Mascarpone, frișcă lichidă, gălbenuș de ou pasteurizat, zahăr, cacao, biscuiți amaretti (zahăr, făină de grâu, sâmburi de caise 13%, albuș de ou, proteine din lapte, agenți de creștere E500 și E503, arome), cafea decofeinizată.",
         "allergens": [
           1,
           3,
           7
         ],
-        "included": true,
-        "note": "Biscuiții amaretti conțin sâmburi de caise, menționați distinct în ingrediente."
+        "note": "Compoziția biscuiților amaretti a fost comunicată anterior.",
+        "included": true
       }
     },
     {
       "key": "miercuri",
       "label": "Miercuri",
-      "date": "28 oct",
+      "date": "4 nov",
       "menus": [
         {
           "label": "Meniu 1",
-          "price": 42,
+          "price": 45,
           "dishes": [
             {
-              "name": "Supă cremă de zucchini",
+              "name": "Supă cremă de dovleac copt",
               "quantity": "300 ml",
-              "ingredients": "Zucchini, ceapă, țelină, cartof, smântână vegetală de gătit.",
+              "ingredients": "Dovleac, ceapă, țelină, morcov, cartof, smântână vegetală de gătit, roșii, ardei, ulei de măsline.",
               "allergens": [
                 9
               ],
-              "check": "Verificați ingredientele și posibilii alergeni ai smântânii vegetale folosite."
+              "check": "Verificați alergenii de pe eticheta smântânii vegetale de gătit."
             },
             {
-              "name": "Falafel cu hummus de casă și salată tabbouleh",
+              "name": "Tocăniță French style cu vită și legume",
               "quantity": "250 g",
-              "ingredients": "Năut, ceapă, usturoi, făină, griș, mărar, amidon, coriandru, chimion, ienibahar, turmeric, ulei de floarea-soarelui, linte, susan, ulei de măsline, pătrunjel, roșii, cușcuș.",
-              "allergens": [
-                1,
-                11
-              ],
-              "note": "Lista ingredientelor este comună celor trei componente: falafel, hummus și salată tabbouleh."
+              "ingredients": "Carne de vită, morcov, ardei, ceapă, usturoi, vin roșu, praz.",
+              "allergens": [],
+              "check": "Vinul roșu poate conține sulfiți (alergenul 12); verificați eticheta vinului utilizat pentru stabilirea declarației complete."
             }
-          ],
-          "fast": false
+          ]
         }
       ],
       "dessert": {
-        "name": "Ruladă cu mere",
-        "quantity": "",
-        "ingredients": "Făină de grâu, mere bio, scorțișoară, lapte, ouă.",
+        "name": "Cinnamon rolls",
+        "quantity": "120 g",
+        "ingredients": "Făină, drojdie, lapte, unt, ou, pastă de vanilie, scorțișoară, zahăr brun, cremă de brânză.",
         "allergens": [
           1,
           3,
@@ -141,89 +136,55 @@ window.IANA_MENU = {
     {
       "key": "joi",
       "label": "Joi",
-      "date": "29 oct",
+      "date": "5 nov",
       "menus": [
         {
           "label": "Meniu 1",
           "price": 45,
           "dishes": [
             {
-              "name": "Supă cremă de usturoi copt",
+              "name": "Supă cremă de cartof dulce și bacon crocant",
               "quantity": "300 ml",
-              "ingredients": "Usturoi, țelină, ceapă, praz, cartof, lapte.",
+              "ingredients": "Cartof dulce, usturoi, țelină, ceapă, praz, lapte, bacon, ulei de măsline.",
               "allergens": [
                 7,
                 9
-              ]
+              ],
+              "check": "Verificați eticheta baconului pentru eventuali alergeni suplimentari."
             },
             {
-              "name": "Pulled pork BBQ cu cartofi Crispers și salată de varză",
+              "name": "Rigatoni cu somon și feta",
               "quantity": "250 g",
-              "ingredients": "Ceafă de porc, cartofi, morcov, cimbru, boia, boia afumată, varză, ulei de măsline, oțet. Sos BBQ: ketchup, oțet de mere, zahăr brun, sos Worcestershire Heinz, muștar Dijon, boia afumată, usturoi granulat, ceapă granulată. Sos Worcestershire Heinz (varianta de 150 ml distribuită în România): oțet din alcool, melasă, oțet din malț de orz, apă, zahăr, tamarind, sare, ceapă, hamsii (pește), usturoi, arome, condimente.",
+              "ingredients": "Făină, ou, sare, file de somon, brânză feta, smântână de gătit, rozmarin.",
               "allergens": [
                 1,
+                3,
                 4,
-                10
+                7
               ],
-              "note": "În sosul BBQ, glutenul (orz) și peștele provin din Worcestershire Heinz; muștarul este Dijon.",
-              "check": "Verificați pe ambalaj compoziția sosului Worcestershire, a ketchupului și a muștarului Dijon înainte de publicarea finală a declarației de alergeni."
+              "check": "Rețeta din document menționează făină și ou; verificați compoziția pastelor rigatoni utilizate în bucătărie."
             }
           ]
         }
       ],
       "dessert": {
-        "name": "Brioșă cu ciocolată",
-        "quantity": "",
-        "ingredients": "Zahăr, făină, ulei de măsline, unt, ouă, ciocolată.",
+        "name": "Ruladă de dovleac",
+        "quantity": "150 g",
+        "ingredients": "Dovleac, făină, ou, zahăr, ulei de floarea-soarelui, praf de copt.",
         "allergens": [
           1,
-          3,
-          7
+          3
         ],
-        "included": true,
-        "check": "Alergenii 1 (gluten), 3 (ouă) și 7 (lapte) rezultă din ingredientele declarate, presupunând făină de grâu. Verificați eticheta ciocolatei pentru alți alergeni, inclusiv soia, și pentru eventuale urme de fructe cu coajă lemnoasă."
+        "check": "Alergenul 1 presupune făină de grâu; verificați sortimentul utilizat.",
+        "included": true
       }
     },
     {
       "key": "vineri",
       "label": "Vineri",
-      "date": "30 oct",
-      "menus": [
-        {
-          "label": "Meniu 1",
-          "price": 45,
-          "dishes": [
-            {
-              "name": "Supă cremă de ciuperci cu crutoane",
-              "quantity": "300 ml",
-              "ingredients": "Ceapă, țelină, cartof, ciuperci, ulei de măsline; crutoane (pâine graham, praf de usturoi, cimbru, ulei de măsline).",
-              "allergens": [
-                1,
-                9
-              ]
-            },
-            {
-              "name": "Pui cu rozmarin, sos Cheddar și piure de cartofi",
-              "quantity": "250 g",
-              "ingredients": "Piept de pui, rozmarin, cheddar, smântână de gătit, ceapă, cartofi, lapte, parmezan.",
-              "allergens": [
-                7
-              ]
-            }
-          ]
-        }
-      ],
-      "dessert": {
-        "name": "Papanași cu smântână și dulceață de fructe de pădure",
-        "quantity": "120 g",
-        "ingredients": "Făină, brânză de vaci, zahăr, pastă de vanilie, coajă de lămâie, bicarbonat de sodiu, dulceață de fructe de pădure, smântână 20%.",
-        "allergens": [
-          1,
-          7
-        ],
-        "included": true,
-        "check": "Alergenul 1 presupune făină de grâu; verificați sortimentul de făină folosit."
-      }
+      "date": "6 nov",
+      "menus": [],
+      "pending": true
     }
   ],
   "drinks": [

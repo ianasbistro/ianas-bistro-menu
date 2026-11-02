@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#4f271d">
-  <meta name="description" content="Meniul săptămânii, cafea, băuturi și patiserie la Iana's Bistro. Consulta preparatele, ingredientele si alergenii.">
+  <meta name="description" content="Meniul săptămânii 2–6 noiembrie, cafea, băuturi și sandwich-uri la Iana's Bistro. Program Luni–Vineri 09:00–18:00.">
   <title>iana's bistro | Meniu</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,15 +37,21 @@
     /* Eticheta mai lunga incape pe mobil, fara schimbarea structurii navigatiei. */
     .main-nav{grid-template-columns:1fr 1fr 1.45fr}
     .nav-btn{white-space:normal;line-height:1.25;min-height:49px}
+
+    /* Programul de lucru, păstrând antetul și navigarea existente. */
+    .contact-hours{flex:0 0 100%;font-family:Arial,Helvetica,sans-serif;font-size:11px;line-height:1.5;color:#665247;margin-top:5px}
+    .footer-hours{display:inline-block;margin-top:4px;color:var(--wine);font-weight:700}
+    .menu-pending{padding:27px 23px;text-align:center;color:var(--ink-muted);font-size:17px;line-height:1.5}
+    .menu-pending strong{font-family:'Cormorant Garamond',Georgia,serif;font-size:25px;color:var(--wine);font-weight:500}
   </style>
-  <script defer src="menu-data.js?v=21.0"></script>
-  <script defer src="site.js?v=13.0"></script>
+  <script defer src="menu-data.js?v=24.0"></script>
+  <script defer src="site.js?v=23.0"></script>
 </head>
 <body>
   <div class="screen">
     <header class="hero" aria-label="iana's bistro"><div><div class="hero-wordmark">iana's bistro</div><div class="hero-menu">Meniu</div></div></header>
-    <div class="intro"><div class="eyebrow">Gust bun, în fiecare zi</div><p id="week" class="date">26–30 octombrie 2026</p><div class="ornament" aria-hidden="true">✦</div></div>
-    <div class="contact-strip" aria-label="Contact si adresa">Comenzi: <a href="tel:+40737106669">0737.106.669</a><span aria-hidden="true">·</span>Str. Vasile Lascar, nr. 33</div>
+    <div class="intro"><div class="eyebrow">Gust bun, în fiecare zi</div><p id="week" class="date">2–6 noiembrie 2026</p><div class="ornament" aria-hidden="true">✦</div></div>
+    <div class="contact-strip" aria-label="Contact si adresa">Comenzi: <a href="tel:+40737106669">0737.106.669</a><span aria-hidden="true">·</span>Str. Vasile Lascar, nr. 33<div class="contact-hours">Program: Luni–Vineri, 09:00–18:00</div></div>
     <nav class="main-nav" aria-label="Categorii meniu" role="tablist">
       <button class="nav-btn" role="tab" aria-selected="true" data-tab="food" id="tab-food">Meniul zilei</button>
       <button class="nav-btn" role="tab" aria-selected="false" data-tab="drinks" id="tab-drinks">Cafea &amp; băuturi</button>
@@ -54,7 +60,7 @@
     <main id="main" tabindex="-1">
       <div id="menu-content" aria-live="polite"></div>
     </main>
-    <footer class="footer"><h2>Poftă bună!</h2><p>iana's bistro · Pregătit cu drag</p><p class="footer-contact">Comenzi telefonice: <a href="tel:+40737106669">0737.106.669</a><br>Str. Vasile Lascar, nr. 33</p><button id="allergen-link" style="margin-top:14px;padding:9px 10px;background:transparent;border:1px solid #cfbdb1;border-radius:20px;color:#613c42;font-size:11px">Legenda celor 14 alergeni</button></footer>
+    <footer class="footer"><h2>Poftă bună!</h2><p>iana's bistro · Pregătit cu drag</p><p class="footer-contact">Comenzi telefonice: <a href="tel:+40737106669">0737.106.669</a><br>Str. Vasile Lascar, nr. 33<br><span class="footer-hours">Program: Luni–Vineri, 09:00–18:00</span></p><button id="allergen-link" style="margin-top:14px;padding:9px 10px;background:transparent;border:1px solid #cfbdb1;border-radius:20px;color:#613c42;font-size:11px">Legenda celor 14 alergeni</button></footer>
   </div>
 </body>
 </html>

@@ -28,20 +28,24 @@
        ${item.ingredients ? `<p><strong>Ingrediente:</strong> ${esc(item.ingredients)}</p>` : '<p>Ingredientele nu au fost furnizate.</p>'}
        ${item.traces ? `<div class="traces"><strong>Posibile urme:</strong> ${esc(item.traces)}</div>`:''}
        ${item.note ? `<p><strong>Nota:</strong> ${esc(item.note)}</p>`:''}
+       ${item.check ? `<p><strong>De verificat:</strong> ${esc(item.check)}</p>`:''}
 
     </div></div>`;
   function renderFood() {
     const day = data.days[dayIndex];
-    return `${isWeekend ? '<p class="weekend-hint">Este weekend. Poți consulta meniul oricărei zile din săptămână.</p>' : ''}<div class="days" role="group" aria-label="Alege ziua">${data.days.map((d,i)=>`<button type="button" class="day-btn" data-day="${i}" aria-pressed="${i===dayIndex}">${esc(d.label)}</button>`).join('')}</div>
-      <div class="section-head"><h1>${esc(day.label)}</h1><p>${esc(day.date)} · Meniul zilei</p></div>
-      ${day.menus.map((m,j)=>`<section class="menu-card" aria-label="${esc(m.label)}">
+    const dayButtons = data.days.map((d,i)=>`<button type="button" class="day-btn" data-day="${i}" aria-pressed="${i===dayIndex}">${esc(d.label)}</button>`).join('');
+    const top = `${isWeekend ? '<p class="weekend-hint">Este weekend. Poți consulta meniul oricărei zile din săptămână.</p>' : ''}<div class="days" role="group" aria-label="Alege ziua">${dayButtons}</div><div class="section-head"><h1>${esc(day.label)}</h1><p>${esc(day.date)} · Meniul zilei</p></div>`;
+    if (!day.menus || !day.menus.length) {
+      return `${top}<section class="menu-card menu-pending"><strong>Meniul este în curs de pregătire</strong><p>Preparatele pentru vineri vor fi anunțate în curând.</p></section>`;
+    }
+    const menus = day.menus.map((m,j)=>`<section class="menu-card" aria-label="${esc(m.label)}">
         <div class="menu-card-head"><div class="left"><h3>${esc(m.label)}</h3>${m.fast?'<span class="fast-note">(de post)</span>':m.vegetarian?'<span class="pill">Vegetarian</span>':''}</div>${price(m.price)}</div>
         ${m.dishes.map((d,k)=>dish(d,`dish-${day.key}-${j}-${k}`)).join('')}
         ${m.alternative ? `<div class="menu-alternative"><span>sau · alternativa la felul principal</span></div>${dish(m.alternative,`dish-${day.key}-${j}-alternative`)}` : ''}
-      </section>`).join('')}
-      <section class="dessert-card" aria-label="Desertul zilei"><div class="dessert-label"><h3>Desertul zilei</h3><span class="inclusive ${day.dessert.included===null?'uncertain':''}">${day.dessert.included===true?'Inclus în meniu':day.dessert.included===null?'Includere de confirmat':''}</span></div>
-        ${dish(day.dessert,`dessert-${day.key}`)}</section>
-      <p class="hint">Apasă pe un preparat pentru ingrediente</p>
+      </section>`).join('');
+    const dessertHtml = day.dessert ? `<section class="dessert-card" aria-label="Desertul zilei"><div class="dessert-label"><h3>Desertul zilei</h3><span class="inclusive ${day.dessert.included===null?'uncertain':''}">${day.dessert.included===true?'Inclus în meniu':day.dessert.included===null?'Includere de confirmat':''}</span></div>
+        ${dish(day.dessert,`dessert-${day.key}`)}</section>` : '';
+    return `${top}${menus}${dessertHtml}<p class="hint">Apasă pe un preparat pentru ingrediente</p>
       <div class="notice">Alergenii sunt indicați conform rețetelor și compozițiilor transmise. Posibilele urme declarate de furnizori apar la detaliile preparatului. Pentru întrebări despre alergeni, consultă personalul.</div>`;
   }
   function productsList(items) {
