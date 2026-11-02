@@ -17,8 +17,8 @@
   const mkDetails = item => {
     const ingredients = item.ingredients ? `<p><strong>Ingrediente:</strong> ${esc(item.ingredients)}</p>` : '<p>Lista completa a ingredientelor nu a fost furnizata in document.</p>';
     const traces = item.traces ? `<div class="traces"><strong>Posibile urme:</strong> ${esc(item.traces)}</div>` : '';
-    const checks = item.check ? `<div class="verify"><strong>De verificat:</strong> ${esc(item.check)}</div>` : '';
-    return `<div class="dish-detail" hidden>${ingredients}${traces}${checks}</div>`;
+
+    return `<div class="dish-detail" hidden>${ingredients}${traces}</div>`;
   };
   const dish = (item, id) => `<div class="dish">
     <button class="dish-button" aria-expanded="false" aria-controls="${id}" type="button" data-expand>
@@ -28,7 +28,6 @@
        ${item.ingredients ? `<p><strong>Ingrediente:</strong> ${esc(item.ingredients)}</p>` : '<p>Ingredientele nu au fost furnizate.</p>'}
        ${item.traces ? `<div class="traces"><strong>Posibile urme:</strong> ${esc(item.traces)}</div>`:''}
        ${item.note ? `<p><strong>Nota:</strong> ${esc(item.note)}</p>`:''}
-       ${item.check ? `<p><strong>De verificat:</strong> ${esc(item.check)}</p>`:''}
 
     </div></div>`;
   function renderFood() {
@@ -51,7 +50,7 @@
   function productsList(items) {
     const filtered=items.filter(i=>normalize(i.name+' '+(i.note||'')).includes(normalize(search)));
     return filtered.map((p,i)=>{
-      const details = !!p.check || !!p.ingredients || !!p.traces || !!p.allergens?.length;
+      const details = !!p.ingredients || !!p.traces || !!p.allergens?.length;
       const meta = [p.note || '', p.allergens?.length ? allergens(p):''].filter(Boolean).map(esc).join(' · ');
       if (!details) return `<div class="product-btn" style="cursor:default"><span><span class="product-name">${esc(p.name)}</span>${meta?`<div class="product-sub">${meta}</div>`:''}</span><span class="product-price">${p.price} <small>RON</small></span></div>`;
       const id=`item-${tab}-${i}-${Math.abs(p.name.split('').reduce((a,c)=>a+c.charCodeAt(0),0))}`;
