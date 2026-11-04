@@ -1,6 +1,3 @@
-/* iana's bistro — Meniul 2–6 noiembrie 2026.
-   Bazat pe documentul furnizat: vineri încă nu este stabilit; includerea desertului de miercuri a fost confirmată.
-   Alergenii sunt deduși din ingrediente și trebuie confirmați cu etichetele folosite în bucătărie. */
 window.IANA_MENU = {
   "title": "iana's bistro",
   "week": "2–6 noiembrie 2026",
@@ -11,7 +8,7 @@ window.IANA_MENU = {
       "date": "2 nov",
       "menus": [
         {
-          "label": "Meniu 1",
+          "label": "Meniul zilei",
           "price": 45,
           "dishes": [
             {
@@ -56,7 +53,7 @@ window.IANA_MENU = {
       "date": "3 nov",
       "menus": [
         {
-          "label": "Meniu 1",
+          "label": "Meniul zilei",
           "price": 45,
           "dishes": [
             {
@@ -99,7 +96,7 @@ window.IANA_MENU = {
       "date": "4 nov",
       "menus": [
         {
-          "label": "Meniu 1",
+          "label": "Meniul zilei",
           "price": 45,
           "dishes": [
             {
@@ -122,9 +119,9 @@ window.IANA_MENU = {
         }
       ],
       "dessert": {
-        "name": "Cinnamon rolls",
-        "quantity": "120 g",
-        "ingredients": "Făină, drojdie, lapte, unt, ou, pastă de vanilie, scorțișoară, zahăr brun, cremă de brânză.",
+        "name": "Brioșă cu ciocolată",
+        "quantity": "",
+        "ingredients": "Zahăr, făină, ulei de măsline, unt, ouă, ciocolată.",
         "allergens": [
           1,
           3,
@@ -139,7 +136,7 @@ window.IANA_MENU = {
       "date": "5 nov",
       "menus": [
         {
-          "label": "Meniu 1",
+          "label": "Meniul zilei",
           "price": 45,
           "dishes": [
             {
