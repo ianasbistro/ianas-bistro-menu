@@ -1,45 +1,49 @@
+/* iana's bistro — 9–13 noiembrie 2026.
+   Datele provin din Meniu saptamana 09-13.11.docx.
+   Vineri: meniu neprecizat. La patiserie: doar Pain au Chocolat, 12 RON.
+   Alergenii sunt identificati pe baza ingredientelor declarate; verificati
+   etichetele furnizorilor si retetele complete inainte de publicare. */
 window.IANA_MENU = {
   "title": "iana's bistro",
-  "week": "2–6 noiembrie 2026",
+  "week": "9–13 noiembrie 2026",
   "days": [
     {
       "key": "luni",
       "label": "Luni",
-      "date": "2 nov",
+      "date": "9 nov",
       "menus": [
         {
           "label": "Meniul zilei",
           "price": 45,
           "dishes": [
             {
-              "name": "Supă miso cu legume, ciuperci și ghimbir",
+              "name": "Supă norvegiană cu somon și creveți",
               "quantity": "300 ml",
-              "ingredients": "Ceapă, usturoi, ghimbir, ciuperci, ceapă verde, pastă miso, sos de soia, ulei de susan, morcov, ardei.",
+              "ingredients": "Ceapă, usturoi, ceapă verde, file de somon, creveți, mărar, morcov, smântână de gătit.",
               "allergens": [
-                1,
-                6,
-                11
-              ],
-              "check": "Alergenii 1 (grâu) și 6 (soia) provin din sosul de soia descris anterior. Verificați etichetele pastei miso și sosului de soia pentru compoziția exactă."
+                2,
+                4,
+                7
+              ]
             },
             {
-              "name": "Pui teriyaki cu orez (preparat în bucătăria noastră)",
+              "name": "Plăcintă cu brânză și spanac",
               "quantity": "300 g",
-              "ingredients": "Pulpe de pui, sos de soia, miere, zahăr brun, amidon, usturoi, ceapă, ghimbir, ulei de susan, orez, ceapă verde.",
+              "ingredients": "Făină, ou, brânză feta, spanac, smântână.",
               "allergens": [
                 1,
-                6,
-                11
+                3,
+                7
               ],
-              "check": "Alergenii 1 și 6 depind de sosul de soia folosit; verificați eticheta."
+              "check": "Tipul de făină și compoziția ingredientelor trebuie confirmate la bucătărie."
             }
           ]
         }
       ],
       "dessert": {
-        "name": "Pavlova",
+        "name": "Cheesecake San Sebastian",
         "quantity": "120 g",
-        "ingredients": "Albuș de ou, zahăr, lămâie, smântână pentru frișcă, lapte condensat, mascarpone, afine.",
+        "ingredients": "Cremă de brânză, smântână, zahăr, ou, amidon de porumb.",
         "allergens": [
           3,
           7
@@ -50,7 +54,50 @@ window.IANA_MENU = {
     {
       "key": "marti",
       "label": "Marți",
-      "date": "3 nov",
+      "date": "10 nov",
+      "menus": [
+        {
+          "label": "Meniul zilei",
+          "price": 45,
+          "dishes": [
+            {
+              "name": "Supă cremă de zucchini cu crutoane",
+              "quantity": "300 ml",
+              "ingredients": "Zucchini, ceapă, morcov, cartof, smântână vegetală. Crutoane (compoziție neprecizată).",
+              "allergens": [
+                1
+              ],
+              "check": "Crutoanele sunt menționate în denumire, dar nu au ingrediente în document. Verificați compoziția crutoanelor și a smântânii vegetale pentru alergeni."
+            },
+            {
+              "name": "Pui teriyaki cu orez",
+              "quantity": "250 g",
+              "ingredients": "Pulpe de pui, ghimbir, usturoi, sos de soia, mirin, ceapă, ceapă verde, susan, ulei de susan, orez.",
+              "allergens": [
+                6,
+                11
+              ],
+              "check": "Orezul apare în denumire, nu în lista furnizată de ingrediente. Sosul de soia poate conține și grâu (gluten); verificați eticheta."
+            }
+          ]
+        }
+      ],
+      "dessert": {
+        "name": "Cinnamon rolls",
+        "quantity": "150 g",
+        "ingredients": "Făină, ou, zahăr, cremă de brânză, scorțișoară, unt, lapte, drojdie.",
+        "allergens": [
+          1,
+          3,
+          7
+        ],
+        "included": true
+      }
+    },
+    {
+      "key": "miercuri",
+      "label": "Miercuri",
+      "date": "11 nov",
       "menus": [
         {
           "label": "Meniul zilei",
@@ -59,73 +106,31 @@ window.IANA_MENU = {
             {
               "name": "Supă cremă de linte",
               "quantity": "300 ml",
-              "ingredients": "Linte, ceapă, morcov, cartof, smântână vegetală.",
-              "allergens": [],
-              "check": "Verificați eticheta smântânii vegetale pentru alergeni suplimentari; lista ingredientelor nu indică explicit unul dintre cei 14 alergeni."
-            },
-            {
-              "name": "Lasagna",
-              "quantity": "250 g",
-              "ingredients": "Făină, ou, sare, carne de vită, morcov, ceapă, usturoi, sos de roșii, parmezan, ulei de măsline, rozmarin, busuioc, cimbru.",
-              "allergens": [
-                1,
-                3,
-                7
-              ],
-              "check": "Alergenul 1 presupune făină de grâu. Verificați compoziția sosului de roșii, dacă este un produs cumpărat."
-            }
-          ]
-        }
-      ],
-      "dessert": {
-        "name": "iana's Tiramisu",
-        "quantity": "150 g",
-        "ingredients": "Mascarpone, frișcă lichidă, gălbenuș de ou pasteurizat, zahăr, cacao, biscuiți amaretti (zahăr, făină de grâu, sâmburi de caise 13%, albuș de ou, proteine din lapte, agenți de creștere E500 și E503, arome), cafea decofeinizată.",
-        "allergens": [
-          1,
-          3,
-          7
-        ],
-        "note": "Compoziția biscuiților amaretti a fost comunicată anterior.",
-        "included": true
-      }
-    },
-    {
-      "key": "miercuri",
-      "label": "Miercuri",
-      "date": "4 nov",
-      "menus": [
-        {
-          "label": "Meniul zilei",
-          "price": 45,
-          "dishes": [
-            {
-              "name": "Supă cremă de dovleac copt",
-              "quantity": "300 ml",
-              "ingredients": "Dovleac, ceapă, țelină, morcov, cartof, smântână vegetală de gătit, roșii, ardei, ulei de măsline.",
+              "ingredients": "Linte, ceapă, țelină, morcov, cartof, smântână vegetală de gătit, roșii, ardei, ulei de măsline.",
               "allergens": [
                 9
               ],
-              "check": "Verificați alergenii de pe eticheta smântânii vegetale de gătit."
+              "check": "Verificați compoziția smântânii vegetale pentru eventuali alergeni suplimentari."
             },
             {
-              "name": "Tocăniță French style cu vită și legume",
+              "name": "Falafel cu hummus și salată Tabbouleh",
               "quantity": "250 g",
-              "ingredients": "Carne de vită, morcov, ardei, ceapă, usturoi, vin roșu, praz.",
-              "allergens": [],
-              "check": "Vinul roșu poate conține sulfiți (alergenul 12); verificați eticheta vinului utilizat pentru stabilirea declarației complete."
+              "ingredients": "Falafel (compoziție detaliată neprecizată), năut, cușcuș, ceapă, usturoi, pătrunjel, ulei de măsline, pastă de susan.",
+              "allergens": [
+                1,
+                11
+              ],
+              "check": "Rețeta de falafel nu este detaliată în document. Cușcușul conține de regulă grâu; verificați produsul."
             }
           ]
         }
       ],
       "dessert": {
-        "name": "Brioșă cu ciocolată",
-        "quantity": "",
-        "ingredients": "Zahăr, făină, ulei de măsline, unt, ouă, ciocolată.",
+        "name": "Dovleac copt cu nucă, scorțișoară și miere",
+        "quantity": "120 g",
+        "ingredients": "Dovleac, nucă, scorțișoară, miere.",
         "allergens": [
-          1,
-          3,
-          7
+          8
         ],
         "included": true
       }
@@ -133,55 +138,52 @@ window.IANA_MENU = {
     {
       "key": "joi",
       "label": "Joi",
-      "date": "5 nov",
+      "date": "12 nov",
       "menus": [
         {
           "label": "Meniul zilei",
           "price": 45,
           "dishes": [
             {
-              "name": "Supă cremă de cartof dulce și bacon crocant",
+              "name": "Supă cremă de legume",
               "quantity": "300 ml",
-              "ingredients": "Cartof dulce, usturoi, țelină, ceapă, praz, lapte, bacon, ulei de măsline.",
+              "ingredients": "Cartof, usturoi, țelină, ceapă, praz, lapte, ardei, ulei de măsline.",
               "allergens": [
                 7,
                 9
-              ],
-              "check": "Verificați eticheta baconului pentru eventuali alergeni suplimentari."
+              ]
             },
             {
-              "name": "Rigatoni cu somon și feta",
+              "name": "Orzo cu pui și spanac",
               "quantity": "250 g",
-              "ingredients": "Făină, ou, sare, file de somon, brânză feta, smântână de gătit, rozmarin.",
+              "ingredients": "Făină, ou, sare, piept de pui, spanac, rozmarin.",
               "allergens": [
                 1,
-                3,
-                4,
-                7
+                3
               ],
-              "check": "Rețeta din document menționează făină și ou; verificați compoziția pastelor rigatoni utilizate în bucătărie."
+              "check": "Compoziția orzo este preluată din document: făină, ou, sare. Confirmați ingredientele pastei folosite."
             }
           ]
         }
       ],
       "dessert": {
-        "name": "Ruladă de dovleac",
+        "name": "Albă ca Zăpada",
         "quantity": "150 g",
-        "ingredients": "Dovleac, făină, ou, zahăr, ulei de floarea-soarelui, praf de copt.",
+        "ingredients": "Făină, lapte, amidon, lămâie, zahăr, ou, ulei vegetal.",
         "allergens": [
           1,
-          3
+          3,
+          7
         ],
-        "check": "Alergenul 1 presupune făină de grâu; verificați sortimentul utilizat.",
         "included": true
       }
     },
     {
       "key": "vineri",
       "label": "Vineri",
-      "date": "6 nov",
+      "date": "13 nov",
       "menus": [],
-      "pending": true
+      "pending": "Meniul de vineri este în pregătire. Revenim cu detaliile în curând."
     }
   ],
   "drinks": [
@@ -288,51 +290,9 @@ window.IANA_MENU = {
   ],
   "pastry": [
     {
-      "name": "Croissant cu unt",
-      "price": 12,
-      "category": "Produse de patiserie",
-      "ingredients": "Făină, apă, unt.",
-      "allergens": [
-        1,
-        7
-      ],
-      "check": "Verificați compoziția croissantului de la furnizor."
-    },
-    {
       "name": "Pain au Chocolat",
-      "price": 14,
-      "category": "Produse de patiserie",
-      "ingredients": "Făină, apă, unt, ciocolată (zahăr, masă de cacao, unt de cacao, pudră de cacao, grăsime vegetală din palmier și shea, lecitină din soia).",
-      "allergens": [
-        1,
-        6,
-        7
-      ],
-      "traces": "Ciocolata poate conține urme de arahide, fructe cu coajă lemnoasă, lapte, gluten și ouă."
-    },
-    {
-      "name": "Sandwich Focaccia cu mortadella",
-      "price": 32,
-      "category": "Sandwich-uri",
-      "ingredients": "Focaccia, ulei de măsline, sos pesto, stracciatella, mortadella, roșii uscate, mozzarella. Sos pesto: ulei vegetal de floarea-soarelui, caju, busuioc, brânză Grana Padano, lapte, ou, brânză Pecorino Romano, ulei de măsline, semințe de pin.",
-      "allergens": [
-        1,
-        3,
-        7,
-        8
-      ],
-      "check": "Compoziția ingredientelor cumpărate (focaccia, mortadella, stracciatella, roșii uscate) trebuie confirmată din etichete."
-    },
-    {
-      "name": "Sandwich Fresh",
-      "price": 18,
-      "category": "Sandwich-uri",
-      "ingredients": "Croissant cu unt, cremă de brânză, mușchi file, cașcaval, cheddar, salată verde.",
-      "allergens": [
-        1,
-        7
-      ],
-      "check": "Verificați alergeni suplimentari și compoziția mezelului, croissantului și a cremei de brânză."
+      "price": 12,
+      "category": "Produse de patiserie"
     }
   ],
   "allergenLegend": [

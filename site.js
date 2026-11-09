@@ -17,8 +17,8 @@
   const mkDetails = item => {
     const ingredients = item.ingredients ? `<p><strong>Ingrediente:</strong> ${esc(item.ingredients)}</p>` : '<p>Lista completa a ingredientelor nu a fost furnizata in document.</p>';
     const traces = item.traces ? `<div class="traces"><strong>Posibile urme:</strong> ${esc(item.traces)}</div>` : '';
-
-    return `<div class="dish-detail" hidden>${ingredients}${traces}</div>`;
+    const checks = item.check ? `<div class="verify"><strong>De verificat:</strong> ${esc(item.check)}</div>` : '';
+    return `<div class="dish-detail" hidden>${ingredients}${traces}${checks}</div>`;
   };
   const dish = (item, id) => `<div class="dish">
     <button class="dish-button" aria-expanded="false" aria-controls="${id}" type="button" data-expand>
@@ -32,25 +32,23 @@
     </div></div>`;
   function renderFood() {
     const day = data.days[dayIndex];
-    const dayButtons = data.days.map((d,i)=>`<button type="button" class="day-btn" data-day="${i}" aria-pressed="${i===dayIndex}">${esc(d.label)}</button>`).join('');
-    const top = `${isWeekend ? '<p class="weekend-hint">Este weekend. Poți consulta meniul oricărei zile din săptămână.</p>' : ''}<div class="days" role="group" aria-label="Alege ziua">${dayButtons}</div><div class="section-head"><h1>${esc(day.label)}</h1><p>${esc(day.date)} · Meniul zilei</p></div>`;
-    if (!day.menus || !day.menus.length) {
-      return `${top}<section class="menu-card menu-pending"><strong>Meniul este în curs de pregătire</strong><p>Preparatele pentru vineri vor fi anunțate în curând.</p></section>`;
-    }
-    const menus = day.menus.map((m,j)=>`<section class="menu-card" aria-label="${esc(m.label)}">
+    const pending = !day.menus || day.menus.length === 0;
+    return `${isWeekend ? '<p class="weekend-hint">Este weekend. Poți consulta meniul oricărei zile din săptămână.</p>' : ''}<div class="days" role="group" aria-label="Alege ziua">${data.days.map((d,i)=>`<button type="button" class="day-btn" data-day="${i}" aria-pressed="${i===dayIndex}">${esc(d.label)}</button>`).join('')}</div>
+      <div class="section-head"><h1>${esc(day.label)}</h1><p>${esc(day.date)} · Meniul zilei</p></div>
+      ${pending ? `<section class="menu-card pending-card" aria-label="Meniu în pregătire"><div class="pending-inner"><div class="pending-eyebrow">Meniul zilei</div><h3>În pregătire</h3><p>${esc(day.pending || 'Revenim cu detaliile în curând.')}</p></div></section>` : day.menus.map((m,j)=>`<section class="menu-card" aria-label="${esc(m.label)}">
         <div class="menu-card-head"><div class="left"><h3>${esc(m.label)}</h3>${m.fast?'<span class="fast-note">(de post)</span>':m.vegetarian?'<span class="pill">Vegetarian</span>':''}</div>${price(m.price)}</div>
         ${m.dishes.map((d,k)=>dish(d,`dish-${day.key}-${j}-${k}`)).join('')}
         ${m.alternative ? `<div class="menu-alternative"><span>sau · alternativa la felul principal</span></div>${dish(m.alternative,`dish-${day.key}-${j}-alternative`)}` : ''}
-      </section>`).join('');
-    const dessertHtml = day.dessert ? `<section class="dessert-card" aria-label="Desertul zilei"><div class="dessert-label"><h3>Desertul zilei</h3><span class="inclusive ${day.dessert.included===null?'uncertain':''}">${day.dessert.included===true?'Inclus în meniu':day.dessert.included===null?'Includere de confirmat':''}</span></div>
-        ${dish(day.dessert,`dessert-${day.key}`)}</section>` : '';
-    return `${top}${menus}${dessertHtml}<p class="hint">Apasă pe un preparat pentru ingrediente</p>
-      <div class="notice">Alergenii sunt indicați conform rețetelor și compozițiilor transmise. Posibilele urme declarate de furnizori apar la detaliile preparatului. Pentru întrebări despre alergeni, consultă personalul.</div>`;
+      </section>`).join('')}
+      ${pending ? '' : `<section class="dessert-card" aria-label="Desertul zilei"><div class="dessert-label"><h3>Desertul zilei</h3><span class="inclusive ${day.dessert.included===null?'uncertain':''}">${day.dessert.included===true?'Inclus în meniu':day.dessert.included===null?'Includere de confirmat':''}</span></div>
+        ${dish(day.dessert,`dessert-${day.key}`)}</section>`}
+      ${pending ? '' : `<p class="hint">Apasă pe un preparat pentru ingrediente</p>`}
+      <div class="notice">Alergenii afișați sunt identificați din ingredientele comunicate; lista poate necesita completări după verificarea produselor utilizate. Posibilele urme declarate de furnizori apar la detaliile preparatului. Pentru întrebări despre alergeni, consultă personalul.</div>`;
   }
   function productsList(items) {
     const filtered=items.filter(i=>normalize(i.name+' '+(i.note||'')).includes(normalize(search)));
     return filtered.map((p,i)=>{
-      const details = !!p.ingredients || !!p.traces || !!p.allergens?.length;
+      const details = !!p.check || !!p.ingredients || !!p.traces || !!p.allergens?.length;
       const meta = [p.note || '', p.allergens?.length ? allergens(p):''].filter(Boolean).map(esc).join(' · ');
       if (!details) return `<div class="product-btn" style="cursor:default"><span><span class="product-name">${esc(p.name)}</span>${meta?`<div class="product-sub">${meta}</div>`:''}</span><span class="product-price">${p.price} <small>RON</small></span></div>`;
       const id=`item-${tab}-${i}-${Math.abs(p.name.split('').reduce((a,c)=>a+c.charCodeAt(0),0))}`;
@@ -67,7 +65,7 @@
       ${total ? '' : '<p class="empty">Nu am găsit produse pentru această căutare.</p>'}
       <div class="notice">Pentru detalii despre ingrediente, alergeni sau posibile urme, consultă personalul înainte de a comanda.</div>`;
   }
-  function renderLegend(){return `<div class="section-head"><h1>Ghidul alergenilor</h1><p>Numerotarea europeană · 14 categorii</p></div><div class="legend-grid">${data.allergenLegend.map((a,i)=>`<div class="legend-item"><span class="legend-n">${i+1}</span><span>${esc(a)}</span></div>`).join('')}</div><p class="legend-note">Alergenii sunt identificați pe baza rețetelor și a compozițiilor comunicate pentru ingredientele folosite. Preparatele fără alergeni identificați sunt marcate explicit. Pentru posibile urme menționate pe etichetele furnizorilor, deschide detaliile produsului. Pentru clarificări, întreabă personalul.</p>`}
+  function renderLegend(){return `<div class="section-head"><h1>Ghidul alergenilor</h1><p>Numerotarea europeană · 14 categorii</p></div><div class="legend-grid">${data.allergenLegend.map((a,i)=>`<div class="legend-item"><span class="legend-n">${i+1}</span><span>${esc(a)}</span></div>`).join('')}</div><p class="legend-note">Alergenii sunt identificați pe baza rețetelor și a compozițiilor comunicate pentru ingredientele folosite. Preparatele fără alergeni identificați sunt marcate explicit. Posibilele urme și alergenii suplimentari depind de etichetele furnizorilor și de prepararea efectivă. Pentru clarificări, întreabă personalul.</p>`}
   function setTab(next){tab=next;search='';document.querySelectorAll('[data-tab]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===next)));render();}
   function render(){root.innerHTML=tab==='food'?renderFood():tab==='legend'?renderLegend():renderProducts();}
   document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>setTab(b.dataset.tab)));
