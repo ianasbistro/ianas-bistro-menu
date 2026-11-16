@@ -1,50 +1,42 @@
-/* iana's bistro — 9–13 noiembrie 2026.
-   Datele provin din Meniu saptamana 09-13.11.docx.
-   Vineri: meniu neprecizat. La patiserie: doar Pain au Chocolat, 12 RON.
-   Alergenii sunt identificati pe baza ingredientelor declarate; verificati
-   etichetele furnizorilor si retetele complete inainte de publicare. */
+/* iana's bistro — 16–20 noiembrie 2026.
+   Sursa: Meniu saptamana 16-20.11.docx. Alergeni orientativi; verificati etichetele. */
 window.IANA_MENU = {
   "title": "iana's bistro",
-  "week": "9–13 noiembrie 2026",
+  "week": "16–20 noiembrie 2026",
   "days": [
     {
       "key": "luni",
       "label": "Luni",
-      "date": "9 nov",
+      "date": "16 nov",
       "menus": [
         {
           "label": "Meniul zilei",
           "price": 45,
           "dishes": [
             {
-              "name": "Supă norvegiană cu somon și creveți",
+              "name": "Supă cremă de ciuperci cu trufe",
               "quantity": "300 ml",
-              "ingredients": "Ceapă, usturoi, ceapă verde, file de somon, creveți, mărar, morcov, smântână de gătit.",
-              "allergens": [
-                2,
-                4,
-                7
-              ]
+              "ingredients": "Ceapă, usturoi, cartof, ciuperci, ulei de măsline, trufe.",
+              "allergens": []
             },
             {
-              "name": "Plăcintă cu brânză și spanac",
+              "name": "Quesadilla cu pui și cartofi Crispers",
               "quantity": "300 g",
-              "ingredients": "Făină, ou, brânză feta, spanac, smântână.",
+              "ingredients": "Făină, piept de pui, mozzarella, iaurt, paprika, cartofi Crispers (compoziție neprecizată).",
               "allergens": [
                 1,
-                3,
                 7
-              ],
-              "check": "Tipul de făină și compoziția ingredientelor trebuie confirmate la bucătărie."
+              ]
             }
           ]
         }
       ],
       "dessert": {
-        "name": "Cheesecake San Sebastian",
+        "name": "Brioșă cu ciocolată",
         "quantity": "120 g",
-        "ingredients": "Cremă de brânză, smântână, zahăr, ou, amidon de porumb.",
+        "ingredients": "Făină, smântână, zahăr, ouă, praf de copt, pastă de vanilie, cacao.",
         "allergens": [
+          1,
           3,
           7
         ],
@@ -54,38 +46,38 @@ window.IANA_MENU = {
     {
       "key": "marti",
       "label": "Marți",
-      "date": "10 nov",
+      "date": "17 nov",
       "menus": [
         {
           "label": "Meniul zilei",
           "price": 45,
           "dishes": [
             {
-              "name": "Supă cremă de zucchini cu crutoane",
+              "name": "Supă cremă de roșii cu busuioc și crutoane",
               "quantity": "300 ml",
-              "ingredients": "Zucchini, ceapă, morcov, cartof, smântână vegetală. Crutoane (compoziție neprecizată).",
+              "ingredients": "Roșii, ceapă, țelină, cartof, smântână vegetală, busuioc, orez, crutoane (compoziție neprecizată).",
               "allergens": [
-                1
-              ],
-              "check": "Crutoanele sunt menționate în denumire, dar nu au ingrediente în document. Verificați compoziția crutoanelor și a smântânii vegetale pentru alergeni."
+                1,
+                9
+              ]
             },
             {
-              "name": "Pui teriyaki cu orez",
+              "name": "Lasagna",
               "quantity": "250 g",
-              "ingredients": "Pulpe de pui, ghimbir, usturoi, sos de soia, mirin, ceapă, ceapă verde, susan, ulei de susan, orez.",
+              "ingredients": "Făină, ou, sare, carne de vită, morcov, ceapă, usturoi, sos de roșii, parmezan, ulei de măsline, rozmarin, busuioc, cimbru.",
               "allergens": [
-                6,
-                11
-              ],
-              "check": "Orezul apare în denumire, nu în lista furnizată de ingrediente. Sosul de soia poate conține și grâu (gluten); verificați eticheta."
+                1,
+                3,
+                7
+              ]
             }
           ]
         }
       ],
       "dessert": {
-        "name": "Cinnamon rolls",
+        "name": "Chec cu portocale",
         "quantity": "150 g",
-        "ingredients": "Făină, ou, zahăr, cremă de brânză, scorțișoară, unt, lapte, drojdie.",
+        "ingredients": "Făină, ou, zahăr, sirop de portocale, scorțișoară, unt, lapte, drojdie.",
         "allergens": [
           1,
           3,
@@ -97,7 +89,7 @@ window.IANA_MENU = {
     {
       "key": "miercuri",
       "label": "Miercuri",
-      "date": "11 nov",
+      "date": "18 nov",
       "menus": [
         {
           "label": "Meniul zilei",
@@ -109,70 +101,61 @@ window.IANA_MENU = {
               "ingredients": "Linte, ceapă, țelină, morcov, cartof, smântână vegetală de gătit, roșii, ardei, ulei de măsline.",
               "allergens": [
                 9
-              ],
-              "check": "Verificați compoziția smântânii vegetale pentru eventuali alergeni suplimentari."
+              ]
             },
             {
-              "name": "Falafel cu hummus și salată Tabbouleh",
+              "name": "Steak de conopidă cu hummus și sos chimichurri",
               "quantity": "250 g",
-              "ingredients": "Falafel (compoziție detaliată neprecizată), năut, cușcuș, ceapă, usturoi, pătrunjel, ulei de măsline, pastă de susan.",
+              "ingredients": "Conopidă, ulei de măsline, boia, usturoi, pătrunjel, pastă de susan, hummus (compoziție completă neprecizată).",
               "allergens": [
-                1,
                 11
-              ],
-              "check": "Rețeta de falafel nu este detaliată în document. Cușcușul conține de regulă grâu; verificați produsul."
+              ]
             }
           ]
         }
       ],
       "dessert": {
-        "name": "Dovleac copt cu nucă, scorțișoară și miere",
+        "name": "Mousse de cocos cu ciocolată neagră",
         "quantity": "120 g",
-        "ingredients": "Dovleac, nucă, scorțișoară, miere.",
-        "allergens": [
-          8
-        ],
+        "ingredients": "Lapte de cocos, cacao, ciocolată neagră.",
+        "allergens": [],
         "included": true
       }
     },
     {
       "key": "joi",
       "label": "Joi",
-      "date": "12 nov",
+      "date": "19 nov",
       "menus": [
         {
           "label": "Meniul zilei",
           "price": 45,
           "dishes": [
             {
-              "name": "Supă cremă de legume",
+              "name": "Ciorbă de legume",
               "quantity": "300 ml",
-              "ingredients": "Cartof, usturoi, țelină, ceapă, praz, lapte, ardei, ulei de măsline.",
+              "ingredients": "Cartof, usturoi, morcov, țelină, ceapă, praz, ardei, ulei de măsline.",
               "allergens": [
-                7,
                 9
               ]
             },
             {
-              "name": "Orzo cu pui și spanac",
+              "name": "Plăcintă britanică cu carne și cartofi",
               "quantity": "250 g",
-              "ingredients": "Făină, ou, sare, piept de pui, spanac, rozmarin.",
+              "ingredients": "Ceapă, usturoi, rozmarin, cimbru, făină, carne de vită, cartof.",
               "allergens": [
-                1,
-                3
-              ],
-              "check": "Compoziția orzo este preluată din document: făină, ou, sare. Confirmați ingredientele pastei folosite."
+                1
+              ]
             }
           ]
         }
       ],
       "dessert": {
-        "name": "Albă ca Zăpada",
+        "name": "Griș cu lapte",
         "quantity": "150 g",
-        "ingredients": "Făină, lapte, amidon, lămâie, zahăr, ou, ulei vegetal.",
+        "ingredients": "Griș, lapte, pastă de vanilie, zahăr.",
         "allergens": [
           1,
-          3,
           7
         ],
         "included": true
@@ -181,7 +164,7 @@ window.IANA_MENU = {
     {
       "key": "vineri",
       "label": "Vineri",
-      "date": "13 nov",
+      "date": "20 nov",
       "menus": [],
       "pending": "Meniul de vineri este în pregătire. Revenim cu detaliile în curând."
     }
