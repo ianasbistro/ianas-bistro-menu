@@ -14,9 +14,9 @@ window.IANA_MENU = {
           "price": 45,
           "dishes": [
             {
-              "name": "Supă cremă de ciuperci cu trufe",
+              "name": "Supă cremă de ciuperci",
               "quantity": "300 ml",
-              "ingredients": "Ceapă, usturoi, cartof, ciuperci, ulei de măsline, trufe.",
+              "ingredients": "Ceapă, usturoi, cartof, ciuperci, ulei de măsline.",
               "allergens": []
             },
             {
