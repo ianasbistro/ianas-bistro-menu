@@ -93,7 +93,7 @@ window.IANA_MENU = {
       "menus": [
         {
           "label": "Meniul zilei",
-          "price": 45,
+          "price": 39,
           "dishes": [
             {
               "name": "Supă cremă de linte",
