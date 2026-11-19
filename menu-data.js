@@ -132,12 +132,10 @@ window.IANA_MENU = {
           "price": 45,
           "dishes": [
             {
-              "name": "Ciorbă de legume",
+              "name": "Supă de ceapă",
               "quantity": "300 ml",
-              "ingredients": "Cartof, usturoi, morcov, țelină, ceapă, praz, ardei, ulei de măsline.",
-              "allergens": [
-                9
-              ]
+              "ingredients": "Ceapă, morcov, cartof, smântână vegetală, ulei de măsline.",
+              "allergens": []
             },
             {
               "name": "Plăcintă britanică cu carne și cartofi",
@@ -151,14 +149,15 @@ window.IANA_MENU = {
         }
       ],
       "dessert": {
-        "name": "Griș cu lapte",
-        "quantity": "150 g",
-        "ingredients": "Griș, lapte, pastă de vanilie, zahăr.",
+        "name": "Bomboane tiramisu",
+        "quantity": "120 g",
+        "included": true,
+        "ingredients": "Mascarpone, frișcă lichidă, gălbenuș de ou pasteurizat, zahăr, cacao, biscuiți amaretti, cafea decofeinizată.",
         "allergens": [
           1,
+          3,
           7
-        ],
-        "included": true
+        ]
       }
     },
     {
