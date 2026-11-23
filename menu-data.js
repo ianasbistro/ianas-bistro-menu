@@ -1,42 +1,45 @@
-/* iana's bistro — 16–20 noiembrie 2026.
-   Sursa: Meniu saptamana 16-20.11.docx. Alergeni orientativi; verificati etichetele. */
+/* iana's bistro — Meniul 23–27 noiembrie 2026.
+   Sursa: Meniu saptamana 23-27.11.docx; confirmati alergenii ingredientelor compuse. */
 window.IANA_MENU = {
   "title": "iana's bistro",
-  "week": "16–20 noiembrie 2026",
+  "week": "23–27 noiembrie 2026",
   "days": [
     {
       "key": "luni",
       "label": "Luni",
-      "date": "16 nov",
+      "date": "23 nov",
       "menus": [
         {
           "label": "Meniul zilei",
           "price": 45,
           "dishes": [
             {
-              "name": "Supă cremă de ciuperci",
+              "name": "Supă cremă de roșii coapte și crutoane",
               "quantity": "300 ml",
-              "ingredients": "Ceapă, usturoi, cartof, ciuperci, ulei de măsline.",
-              "allergens": []
-            },
-            {
-              "name": "Quesadilla cu pui și cartofi Crispers",
-              "quantity": "300 g",
-              "ingredients": "Făină, piept de pui, mozzarella, iaurt, paprika, cartofi Crispers (compoziție neprecizată).",
+              "ingredients": "Roșii, ceapă, țelină, cartof, smântână vegetală, busuioc, orez; crutoane (compoziție neprecizată în document).",
               "allergens": [
                 1,
-                7
+                9
+              ],
+              "note": "Crutoanele sunt menționate în denumire, dar nu au compoziția precizată. Confirmați alergenii acestora."
+            },
+            {
+              "name": "Orzo cu pui și spanac",
+              "quantity": "250 g",
+              "ingredients": "Făină, ou, sare, piept de pui, spanac, rozmarin.",
+              "allergens": [
+                1,
+                3
               ]
             }
           ]
         }
       ],
       "dessert": {
-        "name": "Brioșă cu ciocolată",
-        "quantity": "120 g",
-        "ingredients": "Făină, smântână, zahăr, ouă, praf de copt, pastă de vanilie, cacao.",
+        "name": "Pavlova",
+        "quantity": "150 g",
+        "ingredients": "Albuș de ou, zahăr, amidon, zeamă de lămâie, smântână pentru frișcă, mascarpone, lapte condensat, afine, căpșune, coacăze.",
         "allergens": [
-          1,
           3,
           7
         ],
@@ -46,38 +49,36 @@ window.IANA_MENU = {
     {
       "key": "marti",
       "label": "Marți",
-      "date": "17 nov",
+      "date": "24 nov",
       "menus": [
         {
           "label": "Meniul zilei",
           "price": 45,
           "dishes": [
             {
-              "name": "Supă cremă de roșii cu busuioc și crutoane",
+              "name": "Supă cremă de legume",
               "quantity": "300 ml",
-              "ingredients": "Roșii, ceapă, țelină, cartof, smântână vegetală, busuioc, orez, crutoane (compoziție neprecizată).",
+              "ingredients": "Cartof, usturoi, țelină, ceapă, dovlecei, praz, lapte, ardei, ulei de măsline.",
               "allergens": [
-                1,
+                7,
                 9
               ]
             },
             {
-              "name": "Lasagna",
+              "name": "Cod la cuptor cu sos de lămâie și cartofi",
               "quantity": "250 g",
-              "ingredients": "Făină, ou, sare, carne de vită, morcov, ceapă, usturoi, sos de roșii, parmezan, ulei de măsline, rozmarin, busuioc, cimbru.",
+              "ingredients": "File de cod, lămâie, ulei de măsline, cartofi.",
               "allergens": [
-                1,
-                3,
-                7
+                4
               ]
             }
           ]
         }
       ],
       "dessert": {
-        "name": "Chec cu portocale",
+        "name": "Cremșnit",
         "quantity": "150 g",
-        "ingredients": "Făină, ou, zahăr, sirop de portocale, scorțișoară, unt, lapte, drojdie.",
+        "ingredients": "Albuș de ou, zahăr, amidon, zeamă de lămâie, smântână pentru frișcă, mascarpone, făină.",
         "allergens": [
           1,
           3,
@@ -89,81 +90,95 @@ window.IANA_MENU = {
     {
       "key": "miercuri",
       "label": "Miercuri",
-      "date": "18 nov",
-      "menus": [
-        {
-          "label": "Meniul zilei",
-          "price": 39,
-          "dishes": [
-            {
-              "name": "Supă cremă de linte",
-              "quantity": "300 ml",
-              "ingredients": "Linte, ceapă, țelină, morcov, cartof, smântână vegetală de gătit, roșii, ardei, ulei de măsline.",
-              "allergens": [
-                9
-              ]
-            },
-            {
-              "name": "Steak de conopidă cu hummus și sos chimichurri",
-              "quantity": "250 g",
-              "ingredients": "Conopidă, ulei de măsline, boia, usturoi, pătrunjel, pastă de susan, hummus (compoziție completă neprecizată).",
-              "allergens": [
-                11
-              ]
-            }
-          ]
-        }
-      ],
-      "dessert": {
-        "name": "Mousse de cocos cu ciocolată neagră",
-        "quantity": "120 g",
-        "ingredients": "Lapte de cocos, cacao, ciocolată neagră.",
-        "allergens": [],
-        "included": true
-      }
-    },
-    {
-      "key": "joi",
-      "label": "Joi",
-      "date": "19 nov",
+      "date": "25 nov",
       "menus": [
         {
           "label": "Meniul zilei",
           "price": 45,
           "dishes": [
             {
-              "name": "Supă de ceapă",
+              "name": "Supă cremă de conopidă",
               "quantity": "300 ml",
-              "ingredients": "Ceapă, morcov, cartof, smântână vegetală, ulei de măsline.",
-              "allergens": []
+              "ingredients": "Conopidă, ceapă, țelină, morcov, cartof, smântână vegetală de gătit, roșii, ardei, ulei de măsline.",
+              "allergens": [
+                9
+              ],
+              "note": "Verificați compoziția smântânii vegetale."
             },
             {
-              "name": "Plăcintă britanică cu carne și cartofi",
+              "name": "Salată caldă de legume cu pui",
               "quantity": "250 g",
-              "ingredients": "Ceapă, usturoi, rozmarin, cimbru, făină, carne de vită, cartof.",
+              "ingredients": "Vinete, dovlecei, roșii, ardei, ulei de măsline, piept de pui.",
+              "allergens": []
+            }
+          ],
+          "alternative": {
+            "name": "Salată caldă de legume cu tofu",
+            "quantity": "250 g",
+            "ingredients": "Vinete, dovlecei, roșii, ardei, ulei de măsline, tofu.",
+            "allergens": [
+              6
+            ]
+          }
+        }
+      ],
+      "dessert": {
+        "name": "Mousse de ciocolată cu avocado",
+        "quantity": "120 g",
+        "ingredients": "Lapte, ciocolată, avocado.",
+        "allergens": [
+          7
+        ],
+        "note": "Verificați eticheta ciocolatei pentru alți alergeni și posibile urme.",
+        "included": true
+      }
+    },
+    {
+      "key": "joi",
+      "label": "Joi",
+      "date": "26 nov",
+      "menus": [
+        {
+          "label": "Meniul zilei",
+          "price": 45,
+          "dishes": [
+            {
+              "name": "Supă cremă de dovleac copt",
+              "quantity": "300 ml",
+              "ingredients": "Dovleac, cartof, usturoi, morcov, țelină, ceapă, praz, ardei, smântână de gătit, ulei de măsline.",
               "allergens": [
-                1
+                7,
+                9
+              ]
+            },
+            {
+              "name": "Pui cu sos cheddar",
+              "quantity": "250 g",
+              "ingredients": "Piept de pui, ceapă, usturoi, rozmarin, cheddar, mozzarella, cimbru, făină, cartof.",
+              "allergens": [
+                1,
+                7
               ]
             }
           ]
         }
       ],
       "dessert": {
-        "name": "Bomboane tiramisu",
-        "quantity": "120 g",
-        "included": true,
-        "ingredients": "Mascarpone, frișcă lichidă, gălbenuș de ou pasteurizat, zahăr, cacao, biscuiți amaretti, cafea decofeinizată.",
+        "name": "Ruladă cu mere",
+        "quantity": "150 g",
         "allergens": [
           1,
           3,
           7
-        ]
+        ],
+        "included": true,
+        "ingredients": "Mere, făină, lapte, ou, pastă de vanilie, zahăr."
       }
     },
     {
       "key": "vineri",
       "label": "Vineri",
-      "date": "20 nov",
+      "date": "27 nov",
       "menus": [],
       "pending": "Meniul de vineri este în pregătire. Revenim cu detaliile în curând."
     }
