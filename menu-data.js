@@ -99,23 +99,22 @@ window.IANA_MENU = {
             {
               "name": "Supă cremă de conopidă",
               "quantity": "300 ml",
-              "ingredients": "Conopidă, ceapă, țelină, morcov, cartof, smântână vegetală de gătit, roșii, ardei, ulei de măsline.",
+              "ingredients": "Conopidă, ceapă, țelină, morcov, cartof dulce, smântână vegetală de gătit, roșii, ardei, ulei de măsline.",
               "allergens": [
                 9
-              ],
-              "note": "Verificați compoziția smântânii vegetale."
+              ]
             },
             {
-              "name": "Salată caldă de legume cu pui",
+              "name": "Salată caldă de legume cu pui și salată de ceapă roșie cu lămâie și pătrunjel",
               "quantity": "250 g",
-              "ingredients": "Vinete, dovlecei, roșii, ardei, ulei de măsline, piept de pui.",
+              "ingredients": "Vinete, dovlecei, roșii, ardei, ulei de măsline, pătrunjel, lămâie, ceapă roșie, piept de pui.",
               "allergens": []
             }
           ],
           "alternative": {
-            "name": "Salată caldă de legume cu tofu",
+            "name": "Salată caldă de legume cu tofu și năut, cu salată de ceapă roșie cu lămâie și pătrunjel",
             "quantity": "250 g",
-            "ingredients": "Vinete, dovlecei, roșii, ardei, ulei de măsline, tofu.",
+            "ingredients": "Vinete, dovlecei, roșii, ardei, ulei de măsline, pătrunjel, lămâie, ceapă roșie, tofu, năut.",
             "allergens": [
               6
             ]
@@ -125,11 +124,8 @@ window.IANA_MENU = {
       "dessert": {
         "name": "Mousse de ciocolată cu avocado",
         "quantity": "120 g",
-        "ingredients": "Lapte, ciocolată, avocado.",
-        "allergens": [
-          7
-        ],
-        "note": "Verificați eticheta ciocolatei pentru alți alergeni și posibile urme.",
+        "ingredients": "Frișcă vegetală, ciocolată neagră, avocado, stevia, sirop de agave.",
+        "allergens": [],
         "included": true
       }
     },
